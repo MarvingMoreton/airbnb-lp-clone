@@ -1,64 +1,4 @@
-/* #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-} */
-
-/* ///////// */
-
-/* .navbar {
-  display: flex;
-  background: #FFFFFF;
-  box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
-  width: 100%;
-} */
-
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  /* width:100%; */
-}
-
-html {
-font-size: 62.5%;
-  width: 100%;
   box-sizing: border-box;
 }
 
@@ -67,43 +7,23 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-.container {
-  margin: 0 auto;
-  /* max-width: 120rem; */
-}
-
 nav {
   height: 70px;
   display: flex;
   padding: 20px 36px;
   box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
-  width: 100%;
 }
 
-.airbnb-logo{
-  max-width: 100px;
+.bold {
+  font-weight: bold;
 }
 
-
-h1{
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 36px;
-  line-height: 110%;
-  /* identical to box height, or 40px */
-
-
-  color: #000000;
+.gray {
+  color: #918E9B;
 }
 
-p {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 300;
-  font-size: 12px;
-
-  color: #222222;
+.nav--logo {
+  max-width: 200px;
 }
 
 section {
@@ -111,49 +31,77 @@ section {
 }
 
 .hero {
-  display:flex;
+  display: flex;
   flex-direction: column;
 }
 
-.hero--photo{
-  max-width: 420px;
+.hero--photo {
+  max-width: 1700px !important;
   align-self: center;
+  margin-top: 30px;
 }
 
+.hero--text-box {
+text-align:start;
+margin-left: 124px;
+}
 .hero--header {
-  margin-bottom: 6px;
+  margin-bottom: 16px;
 }
 
 .hero--text {
   margin-top: 0;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 110%;
 }
 
+.cards-list {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow-x: auto;
+  justify-content: center;
+}
 
 .card {
   width: 175px;
   font-size: 12px;
+  flex: 0 0 auto;         /* ADD */
+  display: flex;          /* ADD */
+  flex-direction: column; /* ADD */
+  position: relative;
 }
 
 .card--image {
   width: 100%;
   border-radius: 9px;
+  margin-bottom: 9px;
+}
+
+/* ADD */
+.card--title {
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .card--stats {
   display: flex;
   align-items: center;
-  justify-content: start;
-  gap: 4px;
 }
 
 .card--star {
   height: 14px;
-  color: #FE395C;
 }
 
-.gray{
-  color: #918E9B;
+/* ADD */
+.card--price {
+  margin-top: auto;
+}
+
+.card--badge {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  background-color: white;
+  padding: 5px 7px;
+  border-radius: 2px;
+  font-weight: bold;
 }
